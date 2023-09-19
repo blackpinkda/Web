@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>MEGA BEER</title>
+        <link href="css/styles.css" rel="stylesheet" />        
+        <script type="text/javascript">
+        function psk() {
+        	/*
+        	var arr = ["test", "February", "March", "April", "May", "June"];
+        	myLineChart['data']['labels'] = arr;
+        	
+        	myLineChart = new Chart(ctx, )
+        	*/
+
+        	/*
+        	var jsonData = '{"name":"Soomthie","age":2}';
+        	var myJsonObject = JSON.parse(jsonData);
+        	alert(myJsonObject);
+        	*/
+        	
+        	/*
+        	var arr = ["test", "February", "March", "April", "May", "June"];
+        	myLineChart['data']['labels'] = arr;
+        	var jsonObj = myLineChart['data']['labels'];
+        	*/
+        	
+        	//let json = JSON.stringify(myLineChart);
+        	//alert(json);
+        	
+        	/*
+        	var keyList = Object.keys(myLineChart);
+        	for(key in keyList) {
+        		var k = keyList[key];
+        		alert(k);
+        	}
+        	*/
+        	
+        	
+        	/*
+            var url = window.location.search.replace('?','');
+            var params = {};
+            var urlArray = url.split('&');
+            for(var i in urlArray)
+            {
+              var param = urlArray[i].split('=');
+              params[param[0]] = param[1]; 
+            }
+            document.getElementById('psk').innerHTML = params['test'];
+            */
+        }
+    	</script>
+    </head>
+    <body class="sb-nav-fixed" onload="psk();"">
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Statistical Chart</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="charts.html">Refresh</a></li>
+                            <!-- <li class="breadcrumb-item active">Charts</li> -->
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-area me-1"></i>
+                                Commute
+                            </div>
+                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
+                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        </div>                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-bar me-1"></i>
+                                Working Hours
+                            </div>
+                            <div class="card-body"><canvas id="myBarChart" width="100%" height="30"></canvas></div>
+                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-pie me-1"></i>
+                                Work Rate
+                            </div>
+                            <div class="card-body"><canvas id="myPieChart" width="100%" height="30"></canvas></div>
+                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">
+                            Copyright (c) 2023 JALIM-Communications . All rights reserved.<br>
+                            Corporate Registration Number : 129-31-35240</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="js/chart-area.js"></script>
+        <script src="js/chart-bar.js"></script>
+        <script src="js/chart-pie.js"></script>
+    </body>
+</html>
