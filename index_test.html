@@ -1,53 +1,69 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>테스트</title>
-        <style type="text/css">
-            @charset "utf-8";
-            .wrap {
-                font-size:14px;
-                font-weight:bold;
-                padding-left:10px;
-                padding-top:10px;
-                padding-bottom:10px;
-                margin: 0 auto;
-                border-top:1px solid #e0e0e0
-            }
-            .li_x {font-size:12px;margin-left:12px;padding-left:12px;padding-bottom:2px}
-            .li_r {font-size:12px;margin-left:12px;padding-left:12px;padding-bottom:2px;color:#ff0000}
-            .li_b {font-size:12px;margin-left:12px;padding-left:12px;padding-bottom:2px;color:#0000ff}
-            .hide {display:none}
-        </style>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>MEGA BEER</title>
+        <link href="css/styles.css" rel="stylesheet" />        
         <script type="text/javascript">
-        </script>
+        function psk() {
+        	/*
+        	var arr = ["test", "February", "March", "April", "May", "June"];
+        	myLineChart['data']['labels'] = arr;
+        	
+        	myLineChart = new Chart(ctx, )
+        	*/
+
+        	/*
+        	var jsonData = '{"name":"Soomthie","age":2}';
+        	var myJsonObject = JSON.parse(jsonData);
+        	alert(myJsonObject);
+        	*/
+        	
+        	/*
+        	var arr = ["test", "February", "March", "April", "May", "June"];
+        	myLineChart['data']['labels'] = arr;
+        	var jsonObj = myLineChart['data']['labels'];
+        	*/
+        	
+        	//let json = JSON.stringify(myLineChart);
+        	//alert(json);
+        	
+        	/*
+        	var keyList = Object.keys(myLineChart);
+        	for(key in keyList) {
+        		var k = keyList[key];
+        		alert(k);
+        	}
+        	*/
+        	
+        	
+        	/*
+            var url = window.location.search.replace('?','');
+            var params = {};
+            var urlArray = url.split('&');
+            for(var i in urlArray)
+            {
+              var param = urlArray[i].split('=');
+              params[param[0]] = param[1]; 
+            }
+            document.getElementById('psk').innerHTML = params['test'];
+            */
+        }
+    	</script>
     </head>
-    <body>
-        <div class="wrap">
-            정기실사 관리            
-        </div>
-        <div class="">
-            <li class="li_x">후속실사 관리</li>
-            <li class="li_r">XML 생성</li>
-            <li class="li_x">재보고</li>
-            <li class="li_x">금결원현황관리</li>
-        </div>
-        <div class="wrap">
-            정기실사 관리
-        </div>
-        <div class="">
-            <li class="li_x">후속실사 관리</li>
-            <li class="li_x">XML 생성</li>
-            <li class="li_x">재보고</li>
-            <li class="li_x">금결원현황관리</li>
-        </div>
-        <div class="wrap">
-            정기실사 관리
-        </div>
-        <div class="">
-            <li class="li_x">후속실사 관리</li>
-            <li class="li_x">XML 생성</li>
-            <li class="li_x">재보고</li>
-            <li class="li_b">금결원현황관리</li>
-        </div>
+    <body class="sb-nav-fixed" onload="psk();"">
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="card mb-4">
+                            <div class="card-body"><canvas id="myBarChart" width="100%" height="30"></canvas></div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="js/chart-bar.js"></script>
     </body>
 </html>
