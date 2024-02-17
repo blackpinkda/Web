@@ -32,23 +32,17 @@
     </style>
     <script>
     <!--
-        var _value="";
+        var fName="";
         window.onload = function() {
             var url = unescape(location.href);
-            var pm  = url.split('?');
-            var params   = pm[1].split('&');
-            for( var i=0; i<params.length; i++ ) {
-                var param = params[i].split('=');
-                //   alert(param[0]+' 의 값은 '+param[1]+' 입니다.');
-                _value=param[1];
-            }
+            var params = url.split('?');
         }
     //-->
     </script>
   </head>
   <body>
       <div id="yes">
-      <img src="file:///C:/pskemp/img/menu/yes.png" alt="레시피 숙지, 행주 소독, 버너 청결 유지" title="레시피 숙지, 행주 소독, 버너 청결 유지"/>
+      <img src="file:///C:/pskemp/img/menu/"+fName" alt="레시피 숙지, 행주 소독, 버너 청결 유지" title="레시피 숙지, 행주 소독, 버너 청결 유지"/>
     </div>
   </body>
 </html>
