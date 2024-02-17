@@ -30,19 +30,24 @@
         padding-right:70px;
       }
     </style>
-    <script>
+    <script>    
     <!--
         var fName="";
         window.onload = function() {
             var url = unescape(location.href);
             var params = url.split('?');
+            setImg(params[1]);
+        }
+        
+        function setImg(fName) {
+            document.getElementById("fname").src = "file:///C:/pskemp/img/"+fname";
         }
     //-->
     </script>
   </head>
   <body>
       <div id="yes">
-      <img src="file:///C:/pskemp/img/menu/"+fName" alt="레시피 숙지, 행주 소독, 버너 청결 유지" title="레시피 숙지, 행주 소독, 버너 청결 유지"/>
+      <img id="fname" src="file:///C:/pskemp/img/no_image.png" />
     </div>
   </body>
 </html>
