@@ -10,44 +10,44 @@
         padding:0;
         -ms-overflow-style: none;
       }
-      img {
-        width:100%;
-        display: block;
-        margin-bottom: 20px;
-      }      
-      div#wrap{
-         display:flex;
-         flex-flow:row nowrap;
-         justify-content:space-between;
-         
-      }
-      div.thumbnail {
-        float:left;
-        padding:10px;
-      }
-      div.normal {
-        padding-left:70px;
-        padding-right:70px;
-      }
     </style>
     <script>    
     <!--
         var fName="";
         window.onload = function() {
-            var url = unescape(location.href);
-            var params = url.split('?');
-            setImg(params[1]);
+            var params = unescape(location.href).split('?');
+            if(params.length == 2) {
+                setImg(params[1]);
+            }
+            else {
+                setImg("img0");
+            }
         }
         
-        function setImg(fName) {
-            document.getElementById("fname").src = "file:///C:/pskemp/img/"+fname;
+        function setImg(imgId) {
+            var imgCnt = document.images.length;
+            for(var i=0; i<imgCnt; i++) {
+                if(imgId == document.images[i].id) {
+                    document.getElementById(imgId).style.display = "block";
+                }
+                else {
+                    document.getElementById(imgId).style.display = "none";
+                }
+            }
         }
     //-->
     </script>
   </head>
   <body>
-      <div id="yes">
-      <img id="fname" src="file:///C:/pskemp/img/no_image.png" />
-    </div>
+      <img id="img0" src="file:///C:/pskemp/img/no_image.png" style="width:100%; display:block;">
+      <img id="img1" src="file:///C:/pskemp/img/sanitation/health_img1.png" style="width:100%; display:none;">
+      <img id="img2" src="file:///C:/pskemp/img/sanitation/health_img2.png" style="width:100%; display:none;">
+      <img id="img3" src="file:///C:/pskemp/img/sanitation/health_img3.png" style="width:100%; display:none;">
+      <img id="img4" src="file:///C:/pskemp/img/sanitation/health_img4.png" style="width:100%; display:none;">
+      <img id="img5" src="file:///C:/pskemp/img/sanitation/health_img5.png" style="width:100%; display:none;">
+      <img id="img6" src="file:///C:/pskemp/img/sanitation/health_img6.png" style="width:100%; display:none;">
+      <img id="img7" src="file:///C:/pskemp/img/sanitation/health_img7.png" style="width:100%; display:none;">
+      <img id="img8" src="file:///C:/pskemp/img/sanitation/health_img8.png" style="width:100%; display:none;">
+      <img id="img9" src="file:///C:/pskemp/img/sanitation/health_img9.png" style="width:100%; display:none;">
   </body>
 </html>
